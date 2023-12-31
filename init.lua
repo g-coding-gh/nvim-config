@@ -12,14 +12,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  { 'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim'}},
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
-}
 local opts = {}
 
-require("lazy").setup(plugins, opts)
+require("lazy").setup("plugins")
 
 -- telescope
 local builtin = require("telescope.builtin")
@@ -36,6 +31,9 @@ config.setup({
   highlight = { enable = true },
   indent = { enable = true }
 })
+
+-- NeoTree
+vim.keymap.set("n", "<C-e>", ":Neotree filesystem reveal left<CR>", {})
 
 require("options")
 
