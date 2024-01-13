@@ -9,3 +9,4 @@ Nvim setup
 
 
 ## To show hidden files in file explorer toggle shift h 
+## for telescopes live grep to work you need to install ripgrep `brew install ripgprep`
