@@ -17,7 +17,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.relativenumber = true
 vim.opt.number = true
 -- For nerd font
-vim.cmd('set guifont=$HOME/.config/nvim_folder/share/fonts/Hack\\ Nerd\\ Font:h12')
+--vim.cmd('set guifont=$HOME/.config/nvim_folder/share/fonts/Hack\\ Nerd\\ Font:h12')
 
 -- Set leader
 g.mapleader=" "
