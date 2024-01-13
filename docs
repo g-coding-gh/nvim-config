@@ -1,0 +1,3 @@
+currently using telescope to fuzzy find things 
+to find a file based on the name use c-p
+to live grep through files leader+fg
