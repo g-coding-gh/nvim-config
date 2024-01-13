@@ -9,6 +9,13 @@ return   {
   },
   config = function()
     -- NeoTree
+    require('neo-tree').setup({
+      filesystem = {
+        filtered_items = {
+          visible = true
+        }
+      }
+    })
     vim.keymap.set("n", "<C-e>", ":Neotree filesystem reveal left<CR>", {})
   end
 }
