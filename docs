@@ -1,3 +1,12 @@
 currently using telescope to fuzzy find things 
 to find a file based on the name use c-p
 to live grep through files leader+fg
+
+
+Intalling a lsp 
+Step one and two only really need to be done once 
+1. make sure you have the mason plugin {
+    "williamboman/mason.nvim"
+}
+
+2. 
