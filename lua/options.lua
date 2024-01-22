@@ -31,3 +31,13 @@ vim.opt.smartcase = true
 
 -- enable mouse support
 vim.opt.mouse = 'a'
+
+-- terminal keybindings
+--vim.api.nvim_set_keymap('n', '<leader>t', ':split | term<CR>',{ noremap = true, silent = true } )
+--vim.api.nvim_set_keymap('n', '<leader>tv', ':vsplit | term<CR>',{ noremap = true, silent = true } )
+--vim.api.nvim_set_keymap('n', '<leader>th', ':split | term<CR>',{ noremap = true, silent = true } )
+--vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>',{ noremap = true, silent = true } )
+vim.api.nvim_set_keymap('n', '<leader>t', ':split | term<CR>i',{ noremap = true, silent = true } )
+vim.api.nvim_set_keymap('n', '<leader>tv', ':vsplit | term<CR>i',{ noremap = true, silent = true } )
+vim.api.nvim_set_keymap('n', '<leader>th', ':split | term<CR>i',{ noremap = true, silent = true } )
+vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>:bd!<CR>',{ noremap = true, silent = true } )
