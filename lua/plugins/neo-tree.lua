@@ -1,4 +1,4 @@
-return   {
+return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
   dependencies = {
@@ -9,13 +9,14 @@ return   {
   },
   config = function()
     -- NeoTree
-    require('neo-tree').setup({
+    require("neo-tree").setup({
+      window = { auto_expand_width = true },
       filesystem = {
         filtered_items = {
-          visible = true
-        }
-      }
+          visible = true,
+        },
+      },
     })
     vim.keymap.set("n", "<C-e>", ":Neotree filesystem reveal left<CR>", {})
-  end
+  end,
 }

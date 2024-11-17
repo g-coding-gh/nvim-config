@@ -20,7 +20,15 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
-			lspconfig.pyright.setup({ capabilities = capabilities })
+			lspconfig.pyright.setup({
+        settings = {
+          python = {
+            pythonPath = "/Users/gsahajwalla/.pyenv/shims/python" 
+          }
+        },
+        --cmd = { "/Users/gsahajwalla/.pyenv/shims/python", "-m", "pyright" },
+				capabilities = capabilities,
+			})
 			lspconfig.lemminx.setup({ capabilities = capabilities })
 			lspconfig.bashls.setup({ capabilities = capabilities })
 			vim.keymap.set("n", "gH", vim.lsp.buf.hover, {})
